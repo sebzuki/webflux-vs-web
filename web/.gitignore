@@ -51,15 +51,7 @@ buildNumber.properties
 # Code Recommenders
 .recommenders/
 
-#INTELLIJ 
-.idea/
-out/
-.svn/
-*.map
-*.iml
-coverage-error.log
-.iml
-
+.idea/sonarlint/
 
 # Divers
 .metadata
