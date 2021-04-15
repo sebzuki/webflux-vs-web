@@ -5,7 +5,7 @@
 
   <groupId>io.gatling.demo</groupId>
   <artifactId>gatling-maven-plugin-demo</artifactId>
-  <version>3.5.1</version>
+  <version>1.0.0</version>
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -21,7 +21,7 @@
     <dependency>
       <groupId>io.gatling.highcharts</groupId>
       <artifactId>gatling-charts-highcharts</artifactId>
-      <version>${gatling.version}</version>
+      <version>3.5.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -30,13 +30,14 @@
     <testSourceDirectory>src/test/scala</testSourceDirectory>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>${maven-jar-plugin.version}</version>
+        <version>3.2.0</version>
       </plugin>
       <plugin>
         <groupId>net.alchim31.maven</groupId>
         <artifactId>scala-maven-plugin</artifactId>
-        <version>${scala-maven-plugin.version}</version>
+        <version>4.4.1</version>
         <executions>
           <execution>
             <goals>
@@ -61,7 +62,7 @@
       <plugin>
         <groupId>io.gatling</groupId>
         <artifactId>gatling-maven-plugin</artifactId>
-        <version>${gatling-maven-plugin.version}</version>
+        <version>3.1.2</version>
       </plugin>
     </plugins>
   </build>
