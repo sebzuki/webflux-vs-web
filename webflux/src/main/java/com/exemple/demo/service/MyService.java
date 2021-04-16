@@ -21,8 +21,6 @@ public class MyService {
 
 
     public Mono<List<Student>> findStudentsByLocationAndName() {
-//        return Mono.just(List.of(new Student())).delayElement(Duration.ofMillis(200));
-
         return Mono.just(jpaSchoolRepository.findStudentsByLocationAndName("ocation0", "StudentB"))
                         .delayElement(Duration.ofMillis(150));
     }
