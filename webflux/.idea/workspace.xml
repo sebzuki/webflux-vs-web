@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ce756da-35ae-436a-ad1b-d9abd3c49c55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../gatling/RESULT/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatling/RESULT/img_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatling/RESULT/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../gatling/RESULT/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../test.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/main/java/com/exemple/demo/service/MyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/main/java/com/exemple/demo/service/MyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -171,7 +175,7 @@
       <workItem from="1618493631096" duration="13176000" />
       <workItem from="1618508677879" duration="8000" />
       <workItem from="1618508701412" duration="1953000" />
-      <workItem from="1618553922605" duration="1731000" />
+      <workItem from="1618553922605" duration="2065000" />
     </task>
     <servers />
   </component>
