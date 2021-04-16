@@ -3,10 +3,9 @@
  */
 package com.exemple.demo.service;
 
-import com.exemple.demo.repository.PersonRepository;
-import com.exemple.demo.repository.domain.Person;
+import com.exemple.demo.dao.JpaSchoolRepository;
+import com.exemple.demo.dao.domain.Student;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Mono;
 
 import java.time.Duration;
@@ -14,27 +13,17 @@ import java.util.List;
 
 @Service
 public class MyService {
-    private final PersonRepository personRepository;
+    private final JpaSchoolRepository jpaSchoolRepository;
 
-    public MyService(PersonRepository personRepository) {
-        this.personRepository = personRepository;
+    public MyService(JpaSchoolRepository jpaSchoolRepository) {
+        this.jpaSchoolRepository = jpaSchoolRepository;
     }
 
-    @Transactional
-    public Mono<Void> save() {
-        return personRepository.saveAll(List.of(
-                new Person()
-                        .setFirstName("Mark")
-                        .setLastName("Seb"),
-                new Person()
-                        .setFirstName("Job")
-                        .setLastName("Hamil"))).then();
-    }
 
-    public Mono<Person> findStudentsByLocationAndName() {
-        return Mono.defer(() -> Mono.just(
-                new Person().setFirstName("Mark").setLastName("Seb")
-        ).delayElement(Duration.ofMillis(200)));
-        // return personRepository.findById(1L);
+    public Mono<List<Student>> findStudentsByLocationAndName() {
+//        return Mono.just(List.of(new Student())).delayElement(Duration.ofMillis(200));
+
+        return Mono.just(jpaSchoolRepository.findStudentsByLocationAndName("ocation0", "StudentB"))
+                        .delayElement(Duration.ofMillis(150));
     }
 }

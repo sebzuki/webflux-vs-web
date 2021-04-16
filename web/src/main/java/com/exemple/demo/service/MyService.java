@@ -19,11 +19,11 @@ public class MyService {
 
     public List<Student> findStudentsByLocationAndName() {
         try {
-            Thread.sleep(200);
+            Thread.sleep(150);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-//        return jpaSchoolRepository.findStudentsByLocationAndName("ocation0", "StudentB");
-        return List.of(new Student());
+
+        return jpaSchoolRepository.findStudentsByLocationAndName("ocation0", "StudentB");
     }
 }
