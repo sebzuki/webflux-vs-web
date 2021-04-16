@@ -1,0 +1,18 @@
+GET http://localhost:8081/load
+
+<> 2021-04-15T163637.200.json
+
+###
+
+GET http://localhost:8081/load
+
+<> 2021-04-15T154603.200.json
+
+###
+
+GET http://localhost:8081/load
+
+<> 2021-04-15T154559.200.json
+
+###
+

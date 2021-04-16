@@ -3,18 +3,27 @@
  */
 package com.exemple.demo.service;
 
+import com.exemple.demo.dao.JpaSchoolRepository;
+import com.exemple.demo.dao.domain.Student;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
 
 @Service
 public class MyService {
-    private final RestTemplate repository;
+    private final JpaSchoolRepository jpaSchoolRepository;
 
-    public MyService(RestTemplate repository) {
-        this.repository = repository;
+    public MyService(JpaSchoolRepository jpaSchoolRepository) {
+        this.jpaSchoolRepository = jpaSchoolRepository;
     }
 
-    public void load() {
-
+    public List<Student> findStudentsByLocationAndName() {
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+//        return jpaSchoolRepository.findStudentsByLocationAndName("ocation0", "StudentB");
+        return List.of(new Student());
     }
 }
