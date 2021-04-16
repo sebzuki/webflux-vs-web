@@ -4,7 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ce756da-35ae-436a-ad1b-d9abd3c49c55" name="Default Changelist" comment="" />
+    <list default="true" id="6ce756da-35ae-436a-ad1b-d9abd3c49c55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../front/test/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/app/Student.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/test/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/exemple/demo/ServerSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/webflux-vs-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/webflux-vs-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../test.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exemple/demo/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exemple/demo/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exemple/demo/service/MyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exemple/demo/service/MyService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +54,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -78,6 +127,9 @@
       <recent name="D:\TAF\git\webflux-vs-web\webflux\src\main\java\com\exemple\demo" />
       <recent name="D:\TAF\git\webflux-vs-web\webflux\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.exemple.demo" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.WebFlux">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -89,6 +141,17 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,7 +228,7 @@
       <workItem from="1618493631096" duration="13176000" />
       <workItem from="1618508677879" duration="8000" />
       <workItem from="1618508701412" duration="1953000" />
-      <workItem from="1618553922605" duration="4988000" />
+      <workItem from="1618553922605" duration="13720000" />
     </task>
     <servers />
   </component>

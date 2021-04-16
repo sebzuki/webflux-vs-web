@@ -1,3 +1,6 @@
+https://vinsguru.medium.com/java-reactive-programming-flux-create-vs-flux-generate-38a23eb8c053
+
+
 
 BDD H2
 =========================

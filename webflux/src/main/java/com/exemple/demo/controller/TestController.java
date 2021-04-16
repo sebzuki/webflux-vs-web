@@ -8,6 +8,7 @@ import com.exemple.demo.service.MyService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
@@ -24,5 +25,10 @@ public class TestController {
     @GetMapping("load")
     public Mono<List<Student>> load() {
         return myService.findStudentsByLocationAndName();
+    }
+
+    @GetMapping("load-flux")
+    public Flux<Student> loadFlux() {
+        return myService.findStudentsByLocationAndNameFlux();
     }
 }
