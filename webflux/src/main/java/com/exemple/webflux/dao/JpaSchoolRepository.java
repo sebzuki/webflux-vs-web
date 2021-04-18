@@ -1,7 +1,7 @@
-package com.exemple.demo.dao;
+package com.exemple.webflux.dao;
 
-import com.exemple.demo.dao.domain.School;
-import com.exemple.demo.dao.domain.Student;
+import com.exemple.webflux.dao.domain.School;
+import com.exemple.webflux.dao.domain.Student;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;

@@ -1,7 +1,7 @@
-package com.exemple.demo.dao;
+package com.exemple.web.dao;
 
-import com.exemple.demo.dao.domain.School;
-import com.exemple.demo.dao.domain.Student;
+import com.exemple.web.dao.domain.School;
+import com.exemple.web.dao.domain.Student;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
