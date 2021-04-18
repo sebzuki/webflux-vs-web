@@ -1,4 +1,4 @@
-package com.exemple.demo.dao.domain;
+package com.exemple.web.dao.domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,8 +12,8 @@ import javax.persistence.Table;
 @Entity
 @Getter
 @Setter
-@Table(name = "DIRECTOR")
-public class Director {
+@Table(name = "STUDENT")
+public class Student {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -21,10 +21,10 @@ public class Director {
 
     private String name;
 
-    public Director() {
+    public Student() {
     }
 
-    public Director(String name) {
+    public Student(String name) {
         this.name = name;
     }
 }

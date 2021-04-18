@@ -1,10 +1,10 @@
 /*
  * Sébastien Leboucher
  */
-package com.exemple.demo.service;
+package com.exemple.web.service;
 
-import com.exemple.demo.dao.JpaSchoolRepository;
-import com.exemple.demo.dao.domain.Student;
+import com.exemple.web.dao.JpaSchoolRepository;
+import com.exemple.web.dao.domain.Student;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,10 +1,10 @@
 /*
  * Sébastien Leboucher
  */
-package com.exemple.demo.dao;
+package com.exemple.web.dao;
 
 
-import com.exemple.demo.dao.domain.School;
+import com.exemple.web.dao.domain.School;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

@@ -1,10 +1,10 @@
 /*
  * Sébastien Leboucher
  */
-package com.exemple.demo.service;
+package com.exemple.webflux.service;
 
-import com.exemple.demo.dao.JpaSchoolRepository;
-import com.exemple.demo.dao.domain.Student;
+import com.exemple.webflux.dao.JpaSchoolRepository;
+import com.exemple.webflux.dao.domain.Student;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.FluxSink;

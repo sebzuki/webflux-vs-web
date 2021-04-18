@@ -1,17 +1,15 @@
-package com.exemple.demo;
+package com.exemple.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.reactive.config.EnableWebFlux;
 
 /**
  * Application <em>Spring Boot</em> correspondant au serveur HTTP.
  */
 @SpringBootApplication
-@EnableWebFlux
-public class WebFluxApplication {
+public class WebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebFluxApplication.class, args);
+        SpringApplication.run(WebApplication.class, args);
     }
 }

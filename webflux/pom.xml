@@ -23,7 +23,7 @@
 		<apm.version>1.9.0</apm.version>
 		<prometheus.export.version>0.7.0</prometheus.export.version>
 		<micrometer.version>1.3.0</micrometer.version>
-		<start-class>com.exemple.demo.WebFluxApplication</start-class>
+		<start-class>com.exemple.webflux.WebFluxApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>

@@ -1,10 +1,10 @@
 /*
  * Sébastien Leboucher
  */
-package com.exemple.demo.controller;
+package com.exemple.web.controller;
 
-import com.exemple.demo.dao.domain.Student;
-import com.exemple.demo.service.MyService;
+import com.exemple.web.dao.domain.Student;
+import com.exemple.web.service.MyService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

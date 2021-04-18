@@ -1,4 +1,4 @@
-package com.exemple.demo.dao.domain;
+package com.exemple.webflux.dao.domain;
 
 import lombok.Getter;
 import lombok.Setter;

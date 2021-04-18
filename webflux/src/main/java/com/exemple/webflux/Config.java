@@ -1,7 +1,7 @@
 /*
  * Sébastien Leboucher
  */
-package com.exemple.demo;
+package com.exemple.webflux;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
