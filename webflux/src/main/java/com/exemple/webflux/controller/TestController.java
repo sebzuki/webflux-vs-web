@@ -31,4 +31,9 @@ public class TestController {
     public Flux<Student> loadFlux() {
         return myService.findStudentsByLocationAndNameFlux();
     }
+
+    @GetMapping("load-rest")
+    public Mono<List<Student>> loadRest() {
+        return myService.findOthersStudentsByLocationAndName();
+    }
 }

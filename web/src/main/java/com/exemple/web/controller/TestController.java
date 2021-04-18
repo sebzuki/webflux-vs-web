@@ -22,7 +22,12 @@ public class TestController {
     }
 
     @GetMapping("load")
-    public List<Student> load() {
+    public List<Student> load() throws InterruptedException {
         return myService.findStudentsByLocationAndName();
+    }
+
+    @GetMapping("load-rest")
+    public List<Student> loadRest() {
+        return myService.findOthersStudentsByLocationAndName();
     }
 }

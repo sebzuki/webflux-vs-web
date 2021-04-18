@@ -4,6 +4,7 @@
 package com.exemple.webflux.service;
 
 import com.exemple.webflux.dao.JpaSchoolRepository;
+import com.exemple.webflux.dao.RestRepository;
 import com.exemple.webflux.dao.domain.Student;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -16,9 +17,11 @@ import java.util.List;
 @Service
 public class MyService {
     private final JpaSchoolRepository jpaSchoolRepository;
+    private final RestRepository restRepository;
 
-    public MyService(JpaSchoolRepository jpaSchoolRepository) {
+    public MyService(JpaSchoolRepository jpaSchoolRepository, RestRepository restRepository) {
         this.jpaSchoolRepository = jpaSchoolRepository;
+        this.restRepository = restRepository;
     }
 
     public Mono<List<Student>> findStudentsByLocationAndName() {
@@ -35,5 +38,9 @@ public class MyService {
             // fluxSink.complete(); // obligatoire si vous fait une requete http std
 
         }).delayElements(Duration.ofMillis(800));
+    }
+
+    public Mono<List<Student>> findOthersStudentsByLocationAndName() {
+        return restRepository.findStudentsByLocationAndName();
     }
 }

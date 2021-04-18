@@ -1,9 +1,10 @@
 /*
  * Sébastien Leboucher
  */
-package com.exemple.web.dao;
+package com.exemple.web.dao.impl;
 
 
+import com.exemple.web.dao.SchoolRepository;
 import com.exemple.web.dao.domain.School;
 import org.springframework.stereotype.Repository;
 

@@ -1,9 +1,10 @@
 /*
  * Sébastien Leboucher
  */
-package com.exemple.webflux.dao;
+package com.exemple.webflux.dao.impl;
 
 
+import com.exemple.webflux.dao.SchoolRepository;
 import com.exemple.webflux.dao.domain.School;
 import org.springframework.stereotype.Repository;
 
