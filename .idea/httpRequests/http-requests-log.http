@@ -1,7 +1,0 @@
-GET http://localhost:8081/actuator/health
-Accept: application/vnd.spring-boot.actuator.v3+json
-
-<> 2021-04-15T135431.200.json
-
-###
-
