@@ -1,4 +1,4 @@
-package com.exemple.demo.dao.domain;
+package com.exemple.web.dao.domain;
 
 import lombok.Getter;
 import lombok.Setter;

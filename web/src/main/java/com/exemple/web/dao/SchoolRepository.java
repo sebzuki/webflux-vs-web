@@ -1,9 +1,9 @@
 /*
  * Sébastien Leboucher
  */
-package com.exemple.demo.dao;
+package com.exemple.web.dao;
 
-import com.exemple.demo.dao.domain.School;
+import com.exemple.web.dao.domain.School;
 
 import java.util.List;
 

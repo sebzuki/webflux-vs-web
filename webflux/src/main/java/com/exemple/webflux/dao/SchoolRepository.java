@@ -1,9 +1,9 @@
 /*
  * Sébastien Leboucher
  */
-package com.exemple.demo.dao;
+package com.exemple.webflux.dao;
 
-import com.exemple.demo.dao.domain.School;
+import com.exemple.webflux.dao.domain.School;
 
 import java.util.List;
 
