@@ -14,6 +14,6 @@ class WebFluxSimulation extends Simulation {
     .exec(http("Web-Flux-Load")
       .get("/load"))
 
-  setUp(scn.inject(constantUsersPerSec(2000).during(20))
+  setUp(scn.inject(constantUsersPerSec(1500).during(20))
     .protocols(httpProtocol))
 }
