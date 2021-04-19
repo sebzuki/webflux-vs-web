@@ -1,0 +1,35 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="postgresql-example">
+        <provider>org.hibernate.reactive.provider.ReactivePersistenceProvider</provider>
+
+        <class>com.exemple.webflux.dao.domain.School</class>
+        <class>com.exemple.webflux.dao.domain.Director</class>
+        <class>com.exemple.webflux.dao.domain.Student</class>
+        <class>com.exemple.webflux.dao.domain.Teacher</class>
+
+        <properties>
+
+            <!-- PostgreSQL -->
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:postgresql://192.168.1.62:5433/dev"/>
+
+            <!-- Credentials -->
+            <property name="javax.persistence.jdbc.user" value="dev"/>
+            <property name="javax.persistence.jdbc.password" value="dev"/>
+
+            <!-- The Vert.x SQL Client connection pool size -->
+            <property name="hibernate.connection.pool_size" value="10"/>
+
+            <!-- Automatic schema export -->
+            <property name="javax.persistence.schema-generation.database.action" value="none"/>
+
+            <!-- SQL statement logging -->
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.highlight_sql" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>

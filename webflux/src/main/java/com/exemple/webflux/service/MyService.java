@@ -3,44 +3,27 @@
  */
 package com.exemple.webflux.service;
 
-import com.exemple.webflux.dao.JpaSchoolRepository;
-import com.exemple.webflux.dao.RestRepository;
 import com.exemple.webflux.dao.domain.Student;
+import com.exemple.webflux.dao.impl.SchoolRepository;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.FluxSink;
 import reactor.core.publisher.Mono;
 
-import java.time.Duration;
 import java.util.List;
 
 @Service
 public class MyService {
-    private final JpaSchoolRepository jpaSchoolRepository;
-    private final RestRepository restRepository;
+    private final SchoolRepository schoolRepository;
 
-    public MyService(JpaSchoolRepository jpaSchoolRepository, RestRepository restRepository) {
-        this.jpaSchoolRepository = jpaSchoolRepository;
-        this.restRepository = restRepository;
+    public MyService(SchoolRepository schoolRepository) {
+        this.schoolRepository = schoolRepository;
     }
 
-    public Mono<List<Student>> findStudentsByLocationAndName() {
-        return Mono.just(jpaSchoolRepository.findStudentsByLocationAndName("ocation0", "StudentB"))
-                .delayElement(Duration.ofMillis(150));
+    public Mono<List<Student>> findStudentsByLocationAndNameMono(String id) {
+        return schoolRepository.findStudentsByLocationAndNameMono("Location"+id, "StudentA"+id);
     }
 
     public Flux<Student> findStudentsByLocationAndNameFlux() {
-        return Flux.create((FluxSink<Student> fluxSink) -> {
-
-            jpaSchoolRepository.findStudentsByLocationAndName("ocation0", "Student")
-                    .forEach(fluxSink::next);
-
-            // fluxSink.complete(); // obligatoire si vous fait une requete http std
-
-        }).delayElements(Duration.ofMillis(800));
-    }
-
-    public Mono<List<Student>> findOthersStudentsByLocationAndName() {
-        return restRepository.findStudentsByLocationAndName();
+        return schoolRepository.findStudentsByLocationAndName("Location0", "StudentA0");
     }
 }

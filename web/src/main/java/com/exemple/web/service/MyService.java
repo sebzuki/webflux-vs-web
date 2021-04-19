@@ -21,9 +21,8 @@ public class MyService {
         this.restRepository = restRepository;
     }
 
-    public List<Student> findStudentsByLocationAndName() throws InterruptedException {
-        Thread.sleep(150);
-        return jpaSchoolRepository.findStudentsByLocationAndName("ocation0", "StudentB");
+    public List<Student> findStudentsByLocationAndName(String id) {
+        return jpaSchoolRepository.findStudentsByLocationAndName("Location"+id, "StudentB"+id);
     }
 
     public List<Student> findOthersStudentsByLocationAndName() {

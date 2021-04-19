@@ -5,8 +5,8 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +16,10 @@ import javax.persistence.Table;
 public class Student {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(generator = "studentIds")
+    @SequenceGenerator(name = "studentIds",
+            sequenceName = "student_id_seq",
+            allocationSize = 20)
     private long id;
 
     private String name;

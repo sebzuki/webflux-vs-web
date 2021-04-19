@@ -6,6 +6,7 @@ package com.exemple.web.controller;
 import com.exemple.web.dao.domain.Student;
 import com.exemple.web.service.MyService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,9 +22,9 @@ public class TestController {
         this.myService = myService;
     }
 
-    @GetMapping("load")
-    public List<Student> load() throws InterruptedException {
-        return myService.findStudentsByLocationAndName();
+    @GetMapping("load/{id}")
+    public List<Student> load(@PathVariable String id) {
+        return myService.findStudentsByLocationAndName(id);
     }
 
     @GetMapping("load-rest")

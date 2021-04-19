@@ -10,7 +10,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Index;
 import javax.persistence.JoinColumn;
@@ -19,6 +18,7 @@ import javax.persistence.NamedAttributeNode;
 import javax.persistence.NamedEntityGraph;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import java.util.Set;
 
@@ -48,7 +48,10 @@ public class School {
     //            generator = "sequenceGenerator"
     //    )
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "schoolIds")
+    @SequenceGenerator(name = "schoolIds",
+            sequenceName = "school_id_seq",
+            allocationSize = 20)
     private Long id;
 
     @Column(name = "location") // optionel si meme nom
@@ -64,7 +67,7 @@ public class School {
     @OneToMany(cascade = CascadeType.ALL)
     @Fetch(FetchMode.SELECT) // optionel car defaut
     // si je sais combien de relation il peut y avoir, rapide, pas d'impact sur le lazy loading
-    @BatchSize(size = 6)
+//    @BatchSize(size = 6)
     @JoinTable(
             name = "SCHOOL_STUDENT",
             joinColumns = @JoinColumn(name = "SCHOOL_ID", referencedColumnName = "ID"),

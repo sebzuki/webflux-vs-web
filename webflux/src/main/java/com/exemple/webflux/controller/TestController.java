@@ -6,6 +6,7 @@ package com.exemple.webflux.controller;
 import com.exemple.webflux.dao.domain.Student;
 import com.exemple.webflux.service.MyService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
@@ -22,18 +23,13 @@ public class TestController {
         this.myService = myService;
     }
 
-    @GetMapping("load")
-    public Mono<List<Student>> load() {
-        return myService.findStudentsByLocationAndName();
+    @GetMapping("load-mono/{id}")
+    public Mono<List<Student>> loadMono(@PathVariable String id) {
+        return myService.findStudentsByLocationAndNameMono(id);
     }
 
     @GetMapping("load-flux")
     public Flux<Student> loadFlux() {
         return myService.findStudentsByLocationAndNameFlux();
-    }
-
-    @GetMapping("load-rest")
-    public Mono<List<Student>> loadRest() {
-        return myService.findOthersStudentsByLocationAndName();
     }
 }

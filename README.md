@@ -1,4 +1,6 @@
 https://vinsguru.medium.com/java-reactive-programming-flux-create-vs-flux-generate-38a23eb8c053
+https://medium.com/@zineb.errahmouni/cr%C3%A9er-une-simple-application-rest-r%C3%A9active-avec-spring-5-web-flux-et-reactor-3c733ad858e0#:~:text=Spring%2Dwebflux%20a%20%C3%A9t%C3%A9%20cr%C3%A9e,un%20minimum%20de%20ressources%20mat%C3%A9rielles.
+http://cr.openjdk.java.net/~rpressler/loom/Loom-Proposal.html
 
 
 

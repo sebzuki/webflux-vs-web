@@ -79,8 +79,8 @@ public interface JpaSchoolRepository extends JpaRepository<School, String> {
     // ici je peux renvoyer autre chose que School car ça ne rentre pas en conflit avec les requetes de base qui sont paramétrées
     @Query("SELECT st FROM School sc " +
            "LEFT JOIN sc.students st " +
-           "WHERE sc.location LIKE %:location " +
-           "AND st.name LIKE :studentName% " +
+           "WHERE sc.location = :location " +
+           "AND st.name = :studentName " +
            "ORDER BY st.name ")
     List<Student> findStudentsByLocationAndName(
             @Param("location") String location,
