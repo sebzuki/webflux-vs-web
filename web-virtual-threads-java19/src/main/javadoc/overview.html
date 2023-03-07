@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<TITLE>Présentation de l'API.</TITLE>
+</HEAD>
+<BODY>
+	Ce module est monuments-keycloak.Il comprend :
+	<ul>
+		<li>Un fichier <em>pom.xml</em> contenant des dépendances
+			génériques.
+		</li>
+		<li>Un serveur HTTP intégré par <em>Spring Boot</em> (cf. fichier
+			<em>application.properties</em>)
+		</li>
+		<li>L'accès sécurisé par <em>Spring Security</em> est désactivé
+			par défaut (cf. fichiers <em>application.properties</em> et <em>SecurityConfiguration.java</em>)
+		</li>
+		<li>L'enrichissement des logs des services REST (durée,
+			paramètres, etc.) par programmation orientée aspects (<em>Spring
+				AOP</em>).
+		</li>
+		<li>Un exemple de service REST avec service objet et DAO
+			associée.</li>
+		<li>Un test unitaire correspondant au service REST d'exemple.</li>
+	</ul>
+</BODY>
+</HTML>
