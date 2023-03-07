@@ -24,6 +24,13 @@ public class TestController {
 
     @GetMapping("load/{id}")
     public List<Student> load(@PathVariable String id) {
+        ////////////////////////////////////
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        ////////////////////////////////////
         return myService.findStudentsByLocationAndName(id);
     }
 

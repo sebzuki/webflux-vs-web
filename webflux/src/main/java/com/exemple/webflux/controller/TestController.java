@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.time.Duration;
 import java.util.List;
 
 @RequestMapping("/")
@@ -25,7 +26,8 @@ public class TestController {
 
     @GetMapping("load-mono/{id}")
     public Mono<List<Student>> loadMono(@PathVariable String id) {
-        return myService.findStudentsByLocationAndNameMono(id);
+        return myService.findStudentsByLocationAndNameMono(id)
+                .delayElement(Duration.ofMillis(2000)); // delay !!!!!!!!!
     }
 
     @GetMapping("load-flux")

@@ -10,10 +10,10 @@ import static io.gatling.javaapi.core.CoreDsl.scenario;
 import static io.gatling.javaapi.http.HttpDsl.http;
 import static io.gatling.javaapi.http.HttpDsl.status;
 
-public class Web extends Simulation {
-    public Web() {
+public class WebMono extends Simulation {
+    public WebMono() {
         HttpProtocolBuilder httpProtocol = http
-                .baseUrl("http://localhost:8080")
+                .baseUrl("http://localhost:8081")
                 //.inferHtmlResources()
                 .acceptEncodingHeader("gzip, deflate")
                 .acceptLanguageHeader("fr,fr-FR;q=0.5")
@@ -26,8 +26,8 @@ public class Web extends Simulation {
 
         ScenarioBuilder scn = scenario("web")
                 .feed(csv("page.csv").random())
-                .exec(http("load")
-                        .get("/load/#{pageId}")
+                .exec(http("load-mono")
+                        .get("/load-mono/#{pageId}")
                         .check(status().is(200))
                         .headers(headers));
 
