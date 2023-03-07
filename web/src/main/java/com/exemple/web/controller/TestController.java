@@ -26,7 +26,7 @@ public class TestController {
     public List<Student> load(@PathVariable String id) {
         ////////////////////////////////////
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }

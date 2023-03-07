@@ -27,7 +27,7 @@ public class TestController {
     @GetMapping("load-mono/{id}")
     public Mono<List<Student>> loadMono(@PathVariable String id) {
         return myService.findStudentsByLocationAndNameMono(id)
-                .delayElement(Duration.ofMillis(2000)); // delay !!!!!!!!!
+                .delayElement(Duration.ofMillis(500)); // delay !!!!!!!!!
     }
 
     @GetMapping("load-flux")

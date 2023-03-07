@@ -32,7 +32,7 @@ public class WebMono extends Simulation {
                         .headers(headers));
 
         setUp(scn.injectOpen(
-                        rampUsers(10000).during(10))
+                        rampUsers(35000).during(10))
                 .protocols(httpProtocol));
     }
 }
