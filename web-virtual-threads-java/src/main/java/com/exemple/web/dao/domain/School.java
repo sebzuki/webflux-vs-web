@@ -1,4 +1,4 @@
-package com.exemple.webflux.dao.domain;
+package com.exemple.web.dao.domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,20 +6,20 @@ import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Index;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.NamedAttributeNode;
-import javax.persistence.NamedEntityGraph;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Index;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.NamedAttributeNode;
+import jakarta.persistence.NamedEntityGraph;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import java.util.Set;
 
 @Entity
@@ -48,10 +48,7 @@ public class School {
     //            generator = "sequenceGenerator"
     //    )
     @Id
-    @GeneratedValue(generator = "schoolIds")
-    @SequenceGenerator(name = "schoolIds",
-            sequenceName = "school_id_seq",
-            allocationSize = 20)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "location") // optionel si meme nom
@@ -64,10 +61,10 @@ public class School {
     private Director director;
 
     // si la resource Student est du type referentiel
-//    @BatchSize(size = 6)
     @OneToMany(cascade = CascadeType.ALL)
     @Fetch(FetchMode.SELECT) // optionel car defaut
     // si je sais combien de relation il peut y avoir, rapide, pas d'impact sur le lazy loading
+    @BatchSize(size = 6)
     @JoinTable(
             name = "SCHOOL_STUDENT",
             joinColumns = @JoinColumn(name = "SCHOOL_ID", referencedColumnName = "ID"),
