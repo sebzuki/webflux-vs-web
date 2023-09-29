@@ -6,14 +6,12 @@ package com.exemple.web.dao.impl;
 
 import com.exemple.web.dao.SchoolRepository;
 import com.exemple.web.dao.domain.School;
-import lombok.extern.log4j.Log4j2;
+import jakarta.persistence.EntityManager;
 import org.springframework.stereotype.Repository;
 
-import jakarta.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-@Log4j2
 public class SchoolRepositoryImpl implements SchoolRepository {
     private final EntityManager em;
 

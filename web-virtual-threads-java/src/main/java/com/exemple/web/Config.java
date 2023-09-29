@@ -22,6 +22,9 @@ import java.util.concurrent.Executors;
 @Configuration
 public class Config {
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    // https://spring.io/blog/2022/10/11/embracing-virtual-threads
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
     @Bean(TaskExecutionAutoConfiguration.APPLICATION_TASK_EXECUTOR_BEAN_NAME)
     public AsyncTaskExecutor asyncTaskExecutor() {
         return new TaskExecutorAdapter(Executors.newVirtualThreadPerTaskExecutor());
@@ -31,24 +34,18 @@ public class Config {
     public TomcatProtocolHandlerCustomizer<?> protocolHandlerVirtualThreadExecutorCustomizer() {
         return protocolHandler -> protocolHandler.setExecutor(Executors.newVirtualThreadPerTaskExecutor());
     }
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    // https://spring.io/blog/2023/09/19/this-week-in-spring-september-19th-2023-java-21-edition
+    // spring.threads.virtual.enabled=true    <3
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     @Bean
-    RestTemplate restTemplate() throws InterruptedException {
+    RestTemplate restTemplate() {
         return new RestTemplate();
 //        return new RestTemplate(createRequestFactory());
     }
-
-
-//    @Bean
-//    public CommonsRequestLoggingFilter logFilter() {
-//        CommonsRequestLoggingFilter filter
-//                = new CommonsRequestLoggingFilter();
-//        filter.setIncludeQueryString(true);
-//        filter.setIncludePayload(true);
-//        filter.setMaxPayloadLength(10000);
-//        filter.setIncludeHeaders(false);
-//        return filter;
-//    }
 
 
     @Bean
@@ -65,4 +62,15 @@ public class Config {
         bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return bean;
     }
+
+    //    @Bean
+//    public CommonsRequestLoggingFilter logFilter() {
+//        CommonsRequestLoggingFilter filter
+//                = new CommonsRequestLoggingFilter();
+//        filter.setIncludeQueryString(true);
+//        filter.setIncludePayload(true);
+//        filter.setMaxPayloadLength(10000);
+//        filter.setIncludeHeaders(false);
+//        return filter;
+//    }
 }

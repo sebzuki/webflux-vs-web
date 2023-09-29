@@ -1,11 +1,5 @@
 package com.exemple.web.dao.domain;
 
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,11 +14,13 @@ import jakarta.persistence.NamedEntityGraph;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import java.util.Set;
 
 @Entity
-@Getter
-@Setter
 @Table(name = "SCHOOL",
         indexes = @Index(name = "director_school_index", columnList = "director_id"))
 @NamedEntityGraph(
@@ -97,10 +93,10 @@ public class School {
     /**
      * A titre de comparaison sur PGSql, avec 200 000 Schools en base (1 director, 2 teachers, 2 students)
      * Si @Fetch(FetchMode.SUBSELECT), select all avec pagination => 7.6s (4 requetes) pour afficher la page 0 avec 4 éléments
-     *    (presque 11s si on met des UUID à la place des long
+     * (presque 11s si on met des UUID à la place des long
      * Si @BatchSize(size = 6), select all avec pagination => 160ms (4 requetes) pour afficher la même page qu'avant
      * Donc pas de pagination avec @Fetch(FetchMode.SUBSELECT) !!!
-     *
+     * <p>
      * Le remplacement de long par UUID a un impact important sur la taille de la BD : 590Mo -> 790Mo pour 1 000 000 d'enregistrements d'une table de 4 colonnes
      */
 
@@ -112,5 +108,53 @@ public class School {
         this.name = name;
         this.students = students;
         this.director = director;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Director getDirector() {
+        return director;
+    }
+
+    public void setDirector(Director director) {
+        this.director = director;
+    }
+
+    public Set<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(Set<Student> students) {
+        this.students = students;
+    }
+
+    public Set<Teacher> getTeachers() {
+        return teachers;
+    }
+
+    public void setTeachers(Set<Teacher> teachers) {
+        this.teachers = teachers;
     }
 }
