@@ -31,8 +31,8 @@ public class Web extends Simulation {
                         .check(status().is(200))
                         .headers(headers));
 
-        setUp(scn.injectOpen(
-                        rampUsers(10000).during(10))
+        setUp(scn
+                .injectOpen(rampUsers(10000).during(10))
                 .protocols(httpProtocol));
     }
 }

@@ -25,15 +25,15 @@ public class Config {
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     // https://spring.io/blog/2022/10/11/embracing-virtual-threads
     //////////////////////////////////////////////////////////////////////////////////////////////////////
-    @Bean(TaskExecutionAutoConfiguration.APPLICATION_TASK_EXECUTOR_BEAN_NAME)
-    public AsyncTaskExecutor asyncTaskExecutor() {
-        return new TaskExecutorAdapter(Executors.newVirtualThreadPerTaskExecutor());
-    }
-
-    @Bean
-    public TomcatProtocolHandlerCustomizer<?> protocolHandlerVirtualThreadExecutorCustomizer() {
-        return protocolHandler -> protocolHandler.setExecutor(Executors.newVirtualThreadPerTaskExecutor());
-    }
+//    @Bean(TaskExecutionAutoConfiguration.APPLICATION_TASK_EXECUTOR_BEAN_NAME)
+//    public AsyncTaskExecutor asyncTaskExecutor() {
+//        return new TaskExecutorAdapter(Executors.newVirtualThreadPerTaskExecutor());
+//    }
+//
+//    @Bean
+//    public TomcatProtocolHandlerCustomizer<?> protocolHandlerVirtualThreadExecutorCustomizer() {
+//        return protocolHandler -> protocolHandler.setExecutor(Executors.newVirtualThreadPerTaskExecutor());
+//    }
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     // https://spring.io/blog/2023/09/19/this-week-in-spring-september-19th-2023-java-21-edition
