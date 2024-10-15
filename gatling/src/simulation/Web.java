@@ -16,13 +16,12 @@ public class Web extends Simulation {
                 .baseUrl("http://localhost:8080")
                 //.inferHtmlResources()
                 .acceptEncodingHeader("gzip, deflate")
-                .acceptLanguageHeader("fr,fr-FR;q=0.5")
                 .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0");
 
-        Map<String, String> headers = Map.of("Accept", "application/json, text/plain, */*",
-                                            "Sec-Fetch-Dest", "empty",
-                                            "Sec-Fetch-Mode", "cors",
-                                            "Sec-Fetch-Site", "same-origin");
+        Map<String, String> headers = Map.of("Accept", "application/json,text/plain",
+                "Sec-Fetch-Dest", "empty",
+                "Sec-Fetch-Mode", "cors",
+                "Sec-Fetch-Site", "same-origin");
 
         ScenarioBuilder scn = scenario("web")
                 .feed(csv("page.csv").random())
